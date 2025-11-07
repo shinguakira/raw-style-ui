@@ -58,7 +58,7 @@ const getInputStyles = (
     color: disabled ? '#6c757d' : '#212529',
   };
 
-  const variantStyles: Record<string, React.CSSProperties> = {
+  const variantStyles: Record<NonNullable<InputProps['variant']>, React.CSSProperties> = {
     default: {
       border: `1px solid ${borderColor}`,
       borderRadius: '4px',
@@ -72,10 +72,12 @@ const getInputStyles = (
       boxShadow: isFocused ? `0 0 0 3px ${error ? 'rgba(220, 53, 69, 0.15)' : 'rgba(0, 123, 255, 0.15)'}` : 'none',
     },
     filled: {
-      border: `1px solid transparent`,
+      borderTop: '1px solid transparent',
+      borderLeft: '1px solid transparent',
+      borderRight: '1px solid transparent',
+      borderBottom: `2px solid ${borderColor}`,
       borderRadius: '4px',
       backgroundColor: disabled ? '#e9ecef' : '#f8f9fa',
-      borderBottom: `2px solid ${borderColor}`,
       boxShadow: 'none',
     },
   };
