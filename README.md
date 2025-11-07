@@ -121,9 +121,42 @@ npm install
 - **`npm run dev`** - Start Vite development server
 - **`npm run build`** - Build the library for production
 - **`npm run lint`** - Run ESLint to check code quality
+- **`npm run lint:fix`** - Run ESLint and automatically fix issues
 - **`npm run preview`** - Preview the production build
 - **`npm run storybook`** - Start Storybook on port 6006
 - **`npm run build-storybook`** - Build Storybook for deployment
+
+### Linting
+
+This project uses ESLint to maintain code quality and consistency. The ESLint configuration is optimized for TypeScript and React 18.
+
+**Run the linter:**
+```bash
+npm run lint
+```
+
+**Automatically fix linting issues:**
+```bash
+npm run lint:fix
+```
+
+**ESLint Configuration:**
+
+The project uses the following ESLint plugins and presets:
+- `eslint:recommended` - Core ESLint recommended rules
+- `plugin:@typescript-eslint/recommended` - TypeScript-specific linting rules
+- `plugin:react/recommended` - React best practices
+- `plugin:react/jsx-runtime` - React 18 JSX transform support
+- `plugin:react-hooks/recommended` - Rules for React Hooks
+
+**Key Rules:**
+- TypeScript strict type checking
+- React Hooks rules enforcement
+- No unused variables (with exceptions for prefixed with `_`)
+- Prefer `const` over `let`, no `var`
+- Console statements limited to `warn` and `error`
+
+All code must pass linting with zero warnings before committing.
 
 ### Development Workflow
 
@@ -134,12 +167,17 @@ npm run storybook
 
 2. **Make changes** to components in `src/components/`
 
-3. **Lint your code**:
+3. **Lint your code** as you develop:
 ```bash
 npm run lint
 ```
 
-4. **Build the library**:
+4. **Auto-fix linting issues** when possible:
+```bash
+npm run lint:fix
+```
+
+5. **Build the library**:
 ```bash
 npm run build
 ```
