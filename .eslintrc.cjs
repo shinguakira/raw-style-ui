@@ -31,12 +31,9 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    'react/jsx-uses-react': 'off',
     'react/jsx-uses-vars': 'error',
     
     // TypeScript rules
-    '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { 
       argsIgnorePattern: '^_',
       varsIgnorePattern: '^_',
