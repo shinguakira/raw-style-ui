@@ -58,7 +58,7 @@ const getInputStyles = (
     color: disabled ? '#6c757d' : '#212529',
   };
 
-  const variantStyles: Record<NonNullable<InputProps['variant']>, React.CSSProperties> = {
+  const variantStyles: Record<'default' | 'outlined' | 'filled', React.CSSProperties> = {
     default: {
       border: `1px solid ${borderColor}`,
       borderRadius: '4px',
