@@ -66,11 +66,12 @@ A versatile button component with multiple variants and sizes.
 
 ### Input
 
-A flexible input component with label, helper text, and error states.
+A flexible input component with label, helper text, error states, and multiple variants.
 
 ```tsx
 <Input
   type="text"       // 'text' | 'email' | 'password' | 'number'
+  variant="default" // 'default' | 'outlined' | 'filled'
   label="Email"
   placeholder="Enter your email"
   helperText="We'll never share your email"
